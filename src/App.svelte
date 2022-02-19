@@ -1,65 +1,65 @@
 <script lang="ts">
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+	import '$assets/styles/globals.css';
+	import '$assets/styles/tailwind.css';
+	import {
+		mdiAppleIcloud,
+		mdiCamera,
+		mdiChevronLeft,
+		mdiChevronRight,
+		mdiVideoOutline,
+		mdiVoicemail
+	} from '@mdi/js';
+	import Icon from 'mdi-svelte';
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Typescript!</h1>
+<article class="flex flex-col h-screen">
+	<header class="bg-gray-700 flex justify-between px-5 py-3 items-center ">
+		<div>
+			<Icon path={mdiChevronLeft} color="#57A6FF" size="1.5" />
+		</div>
 
-  <Counter />
+		<div class="flex flex-col justify-center items-center">
+			<div
+				class="rounded-full  text-white bg-slate-300 w-10 h-10 flex items-center justify-center font-bold"
+			>
+				J
+			</div>
 
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
+			<div class="flex justify-center items-center text-sm text-white mt-2">
+				<span>JB</span>
+				<Icon path={mdiChevronRight} color="#57A6FF" size="0.9" />
+			</div>
+		</div>
+		<div>
+			<Icon path={mdiVideoOutline} color="#57A6FF" size="1.5" />
+		</div>
+	</header>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
-</main>
+	<section class="flex-1 flex flex-col items-start px-8 py-5 ">
+		<div class="bg-blue-500 rounded-xl p-3 flex justify-start " style="max-width: 70%">
+			<p class="text-white">lo</p>
+		</div>
 
-<style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+		<div class="bg-gray-600 rounded-xl p-3 self-end my-5" style="max-width: 70%">
+			<p class="text-white">lo</p>
+		</div>
+	</section>
 
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
-
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
-  }
-</style>
+	<footer class="bg-gray-900 flex">
+		<div class="flex justify-between mx-3 my-2">
+			<div class="mx-1">
+				<Icon path={mdiCamera} color="#CBD5E1" size="1.5" />
+			</div>
+			<div class="mx-1">
+				<Icon path={mdiAppleIcloud} color="#CBD5E1" size="1.5" />
+			</div>
+		</div>
+		<div class="w-full relative flex items-center">
+			<input type="text" class="border border-red-900 rounded-xl bg-gray-900 w-full" />
+			<div class="absolute bottom-4 right-5">
+				<Icon path={mdiVoicemail} color="#CBD5E1" size="0.7" />
+			</div>
+		</div>
+		<nav />
+	</footer>
+</article>
